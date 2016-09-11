@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	#main{
+		width: 795px;
+		height: 509px;
+		border: 1px solid black;
+		margin:20px auto;
+		position: relative;
+		
+		
+	}
+	
+	.wekil{
+		width:795px;
+		height: 509px;
+		
+
+		
+		
+	}
+	#san{
+		 width: 20px;
+    height: 227px;
+    /*background: yellow;*/
+    position: absolute;
+    top: 31px;
+    left: 389px;
+    transform-origin: bottom;
+
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+	}
+
+
+	#min{
+		width: 20px;
+    height: 194px;
+    /*background: blue;*/
+    position: absolute;
+    top: 64px;
+    left: 389px;
+    transform-origin: bottom;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+	}
+
+
+
+
+	.intoSan{
+			width: 5px;
+    height: 20px;
+    background: #FFEB3B;
+    position: absolute;
+    top: 3px;
+    left: 0px;
+     border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+	}
+
+	.intoMin{
+	    width: 4px;
+    height: 181px;
+    background: red;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    transform-origin: bottom;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;	
+	}
+
+	</style>
+</head>
+<body>
+
+	<div id="main">
+			<img class="wekil" src="image2/kr.jpg"> 
+			<div id="san"><div class="intoSan"></div></div>
+			<div id="min"><div class="intoMin"></div></div>
+	</div>
+
+
+<script>
+	function birinci(){
+var san=document.getElementById("san") 
+
+			function saniyeEqrebi(){
+				var Tarix=new Date();
+				var Saniye=Tarix.getSeconds()
+				san.style.transform="rotate("+Saniye*6+"deg)"
+			}
+setInterval(function(){saniyeEqrebi()},1000)
+
+}
+birinci()
+
+
+
+
+var minut=document.getElementById("min")
+	function deqiqeEqrebi(){
+		var Tarix= new Date();
+		var Deqiqe= Tarix.getMinutes()
+		minut.style.transform="rotate("+Deqiqe*6+"deg)"
+		}
+setInterval(function(){deqiqeEqrebi()},1000)
+
+
+
+</script>
+
+</body>
+</html>
